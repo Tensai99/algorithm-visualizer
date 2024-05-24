@@ -1,0 +1,13 @@
+.cylinder-block {
+    width: 40px;
+    height: 100px;
+    background-color: #ccc;
+    border: 1px solid #000;
+    display: inline-block; /* Display blocks inline */
+    margin-right: 10px; /* Add margin to the right side */
+  }
+  
+  .block-label {
+    font-size: 12px;
+  }
+  
