@@ -1,71 +1,79 @@
-# Getting Started with Create React App
+# Algorithm Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Algorithm Visualizer is a web application built with React that visualizes various sorting algorithms. This tool helps users understand how sorting algorithms work through interactive visualizations.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Visualize different sorting algorithms including Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort, Heap Sort, and Shell Sort.
+- Adjust the speed of the visualizations.
+- Customize the size of the array being sorted.
+- View the code implementation of the selected algorithm in different programming languages.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get started with the project, you need to have [Node.js](https://nodejs.org/) installed on your machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/yourusername/algorithm-visualizer.git
+    cd algorithm-visualizer
+    ```
 
-### `npm test`
+2. **Install dependencies:**
+    ```sh
+    npm install
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Running the Application
 
-### `npm run build`
+To start the development server, run:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This will start the application in development mode and open it in your default web browser. If it doesn't open automatically, navigate to http://localhost:3000 in your browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Usage
+Select an Algorithm:
 
-### `npm run eject`
+Use the dropdown menu to select the sorting algorithm you want to visualize.
+Adjust Settings:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Use the sliders to adjust the speed of the visualization and the size of the array.
+Start Sorting:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Click the "Sort" button to start the visualization.
+View Code:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Toggle the code view to see the implementation of the selected algorithm in different programming languages.
+Project Structure
+Here is an overview of the project structure:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+algorithm-visualizer/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── AlgorithmVisualizer.js
+│   │   ├── Blocks.js
+│   │   └── ...
+│   ├── utils/
+│   │   ├── implementations.js
+│   │   └── ...
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── package.json
+├── README.md
+└── ...
 
-## Learn More
+Key Files and Directories
+src/components/AlgorithmVisualizer.js: The main component that handles the visualization logic.
+src/components/Blocks.js: A component to render the array blocks.
+src/utils/implementations.js: Contains the implementations of the sorting algorithms.
+Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes. Make sure to update the documentation as needed.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
+License
+This project is licensed under the MIT License. See the LICENSE file for details.

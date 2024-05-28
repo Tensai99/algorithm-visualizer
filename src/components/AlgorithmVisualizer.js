@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import CylinderBlock from './CylinderBlock';
-import './CylinderBlock.css';
+import Blocks from './Blocks';
+import './Blocks.css';
 import './AlgorithmVisualizer.css';
+import Implementations from './implementations';
 
 const AlgorithmVisualizer = () => {
   // State to hold the array of blocks
@@ -19,6 +20,9 @@ const AlgorithmVisualizer = () => {
   // Reference to hold the interval ID for sorting animation
   const intervalRef = useRef(null);
 
+  // Implementations component
+  const { language, toggleLanguage, getAlgorithmImplementation } = Implementations();
+  
   // Function to initialize the array with random values
   const initializeArray = useCallback(() => {
     if (isSorting) {
@@ -366,7 +370,7 @@ const AlgorithmVisualizer = () => {
             {/* Conditionally render the "Initialize Array" button based on initialization */}
             {!initialized && <button onClick={initializeArray}>Initialize Array</button>}
             {/* Conditionally render the "Initialize Another Array" button based on initialization */}
-            {initialized && <button onClick={initializeAnotherArray}>Initialize Another Array</button>}
+            {initialized && <button onClick={initializeAnotherArray}>Init Array</button>}
             <select value={selectedAlgorithm} onChange={handleAlgorithmChange}>
               <option value="BubbleSort">Bubble Sort</option>
               <option value="SelectionSort">Selection Sort</option>
@@ -375,24 +379,43 @@ const AlgorithmVisualizer = () => {
               <option value="QuickSort">Quick Sort</option>
               <option value="HeapSort">Heap Sort</option>
               <option value="ShellSort">Shell Sort</option>
+              {/* Add options for other algorithms as needed */}
             </select>
             {/* Conditionally render the "Sort" button based on initialization */}
             {initialized && <button onClick={playSorting} disabled={isSorting}>Sort</button>}
           </div>
+          {/* Display area for algorithm implementation */}
+          <div className="algorithm-implementation">
+            <textarea
+              readOnly
+              rows="10"
+              cols="50"
+              value={getAlgorithmImplementation(selectedAlgorithm, language)}
+            ></textarea>
+            {/* Toggle Language buttons */}
+            <div>
+              <button onClick={() => toggleLanguage('javascript')} className={language === 'javascript' ? 'active' : ''}>JavaScript</button>
+              <button onClick={() => toggleLanguage('python')} className={language === 'python' ? 'active' : ''}>Python</button>
+            </div>
+          </div>
         </div>
+        <br></br>
         {/* Middle column */}
         <div className="column">
           {/* Container for the blocks */}
-          <div className="cylinder-container">
-            {array.map((block, index) => (
-              <CylinderBlock key={index} height={block.value} color={block.color} size={blockSize} />
-            ))}
+          <div className="blocks-container">
+            <div className="blocks">
+              {array.map((block, index) => (
+                <Blocks key={index} height={block.value} color={block.color} size={blockSize} />
+              ))}
+            </div>
           </div>
         </div>
+        <br></br>  
         {/* Right column */}
         <div className="column">
           <div className="control-group">
-            <label>Animation Speed</label>
+            <label>Speed</label>
             <input
               type="range"
               min="100"
@@ -400,7 +423,9 @@ const AlgorithmVisualizer = () => {
               step="100"
               value={animationSpeed}
               onChange={handleSpeedChange}
-              />
+            />
+          </div>
+          <div className="control-group">
             <label>Block Size</label>
             <input
               type="range"
@@ -408,13 +433,13 @@ const AlgorithmVisualizer = () => {
               max="50"
               step="5"
               value={blockSize}
-              onChange={adjustBlockSize}            />
+              onChange={adjustBlockSize}
+            />
           </div>
         </div>
       </div>
     </div>
-  );
+  );    
 };
 
 export default AlgorithmVisualizer;
-

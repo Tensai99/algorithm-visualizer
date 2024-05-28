@@ -1,55 +1,77 @@
+/* AlgorithmVisualizer.css */
 .algorithm-visualizer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+  background-color: #e6e5dc; /* Cream white background color */
 }
 
 .row {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-bottom: 20px;
   width: 100%;
 }
 
 .column {
-  flex: 1;
-  margin: 0 10px;
-}
-
-.cylinder-container {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  margin-top: 20px;
-  border: 1px solid #000;
-  padding: 10px;
-  background-color: #f9f9f9;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin-top: 20px;
+  flex: 1; /* Updated to make columns flexible */
+  margin: 0 10px; /* Add margins between columns */
 }
 
 .control-group {
+  margin-bottom: 20px;
+}
+
+.blocks-container {
+  background-color: #282c34; /* Set background color */
+  border: 1px solid #333; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px; /* Padding */
+}
+
+.blocks {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.control-group.left {
-  justify-content: flex-start;
+.algorithm-implementation {
+  background-color: #1e1e1e; /* VS Code background color */
+  color: #d4d4d4; /* VS Code text color */
+  border: 1px solid #333; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px; /* Padding */
 }
 
-.control-group.right {
-  justify-content: flex-end;
+.algorithm-implementation textarea {
+  width: 100%; /* Full width */
+  height: 200px; /* Set a fixed height */
+  background-color: transparent; /* Transparent background */
+  color: inherit; /* Inherit text color */
+  font-family: 'Consolas', 'Menlo', 'Courier', monospace; /* Use monospaced font */
+  border: none; /* No border */
+  resize: none; /* Disable resizing */
+  outline: none; /* No outline */
 }
 
-.controls select,
-.controls button,
-.controls input,
-.controls label {
-  margin: 0 10px;
+/* Apply 3D effect and space between buttons */
+.algorithm-visualizer .column .control-group button,
+.algorithm-visualizer .column .control-group select,
+.algorithm-visualizer .algorithm-implementation button,
+.algorithm-visualizer .control-group label {
+  background-color: #282c34; /* Background color */
+  color: white; /* Text color */
+  border: 1px solid #111; /* Border */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5), -1px -1px 3px rgba(255, 255, 255, 0.1) inset; /* 3D effect */
+  border-radius: 4px; /* Rounded corners */
+  padding: 5px 10px; /* Padding */
+  margin-right: 10px; /* Space between elements */
 }
 
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}

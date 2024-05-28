@@ -1,19 +1,18 @@
 import React from 'react';
-import './CylinderBlock.css';
+import './Blocks.css';
 
-const CylinderBlock = ({ height, color, size }) => {
+const Blocks = ({ height, color, size }) => {
   const blockStyle = {
     height: `${height}px`,
-    backgroundColor: color,
+    backgroundColor: color, // Use color prop for background color
     width: `${size}px`, // Set the width based on size prop
   };
 
   return (
-    <div className="cylinder-block" style={blockStyle}>
+    <div className="block" style={blockStyle}>
       <div className="block-label">{height}</div>
     </div>
   );
 };
 
-export default CylinderBlock;
-
+export default Blocks;
