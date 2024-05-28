@@ -30,25 +30,30 @@ To start the development server, run:
 
 ```sh
 npm start
+```
 
 This will start the application in development mode and open it in your default web browser. If it doesn't open automatically, navigate to http://localhost:3000 in your browser.
 
-Usage
-Select an Algorithm:
+## Usage
+- Select an Algorithm:
 
-Use the dropdown menu to select the sorting algorithm you want to visualize.
-Adjust Settings:
+    Use the dropdown menu to select the sorting algorithm you want to visualize.
 
-Use the sliders to adjust the speed of the visualization and the size of the array.
-Start Sorting:
+- Adjust Settings:
 
-Click the "Sort" button to start the visualization.
-View Code:
+    Use the sliders to adjust the speed of the visualization and the size of the array.
 
-Toggle the code view to see the implementation of the selected algorithm in different programming languages.
-Project Structure
+- Start Sorting:
+
+    Click the "Sort" button to start the visualization.
+
+- View Code:
+
+    Toggle the code view to see the implementation of the selected algorithm in different programming languages.
+
+## Project Structure
 Here is an overview of the project structure:
-
+```sh
 algorithm-visualizer/
 ├── public/
 │   ├── index.html
@@ -67,13 +72,16 @@ algorithm-visualizer/
 ├── package.json
 ├── README.md
 └── ...
+```
+## Key Files and Directories
+- src/components/AlgorithmVisualizer.js: The main component that handles the visualization logic.
 
-Key Files and Directories
-src/components/AlgorithmVisualizer.js: The main component that handles the visualization logic.
-src/components/Blocks.js: A component to render the array blocks.
-src/utils/implementations.js: Contains the implementations of the sorting algorithms.
-Contributing
+- src/components/Blocks.js: A component to render the array blocks.
+
+- src/utils/implementations.js: Contains the implementations of the sorting algorithms.
+
+## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes. Make sure to update the documentation as needed.
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
