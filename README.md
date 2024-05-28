@@ -35,21 +35,21 @@ npm start
 This will start the application in development mode and open it in your default web browser. If it doesn't open automatically, navigate to http://localhost:3000 in your browser.
 
 ## Usage
-- Select an Algorithm:
+1. **Select an Algorithm:**
 
-    Use the dropdown menu to select the sorting algorithm you want to visualize.
+    - Use the dropdown menu to select the sorting algorithm you want to visualize.
 
-- Adjust Settings:
+2. **Adjust Settings:**
 
-    Use the sliders to adjust the speed of the visualization and the size of the array.
+    - Use the sliders to adjust the speed of the visualization and the size of the array.
 
-- Start Sorting:
+3. **Start Sorting:**
 
-    Click the "Sort" button to start the visualization.
+    - Click the "Sort" button to start the visualization.
 
-- View Code:
+4. **View Code:**
 
-    Toggle the code view to see the implementation of the selected algorithm in different programming languages.
+    - Toggle the code view to see the implementation of the selected algorithm in different programming languages.
 
 ## Project Structure
 Here is an overview of the project structure:
