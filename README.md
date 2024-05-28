@@ -84,4 +84,4 @@ algorithm-visualizer/
 Contributions are welcome! Please fork the repository and create a pull request with your changes. Make sure to update the documentation as needed.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
